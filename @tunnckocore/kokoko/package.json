@@ -1,6 +1,6 @@
 {
   "name": "@tunnckocore/kokoko",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "license": "MIT",
   "scripts": {
     "verz": "lerna version --force-publish=\"$npm_package_name\""
