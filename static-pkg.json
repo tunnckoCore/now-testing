@@ -1,0 +1,12 @@
+{
+  "name": "barry-12344",
+  "version": "0.2.0",
+  "license": "MIT",
+  "scripts": {
+    "cleanup": "rm -rf dist",
+    "prebuild": "yarn run cleanup",
+    "build": "mkdir -p dist/{main,module,types,deno} && echo \"module.exports = '$npm_package_name';\" > dist/main/index.js",
+    "postbuild": "yarn run release",
+    "release": "node -p \"JSON.stringify({files:['main','module','types','deno'],main:'main/index.js',module:'module/index.js',types:'types/index.d.ts',name:'$npm_package_name',version:'$npm_package_version'})\" > dist/package.json"
+  }
+}

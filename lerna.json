@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json.schemastore.org/lerna",
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": [
+    "configs/*",
+    "packages/*",
+    "@tunnckocore/*",
+    "@hela/*"
+  ],
+  "changelog": {
+    "cacheDir": "node_modules/.cache",
+    "ignoreCommitters": [
+      "*bot"
+    ],
+    "nextVersion": "Unreleased"
+  },
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "message": "chore: release package(s)",
+      "signGitTag": false,
+      "signGitCommit": false,
+      "allowBranch": [
+        "master"
+      ]
+    }
+  }
+}

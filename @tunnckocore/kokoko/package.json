@@ -1,0 +1,17 @@
+{
+  "name": "@tunnckocore/kokoko",
+  "version": "0.9.0",
+  "license": "MIT",
+  "scripts": {
+    "verz": "lerna version --force-publish=\"$npm_package_name\""
+  },
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "typings": "src/index.ts",
+  "dependencies": {
+    "stringify-github-short-url": "^3.1.3"
+  },
+  "browserslist": [
+    "node 10.13"
+  ]
+}

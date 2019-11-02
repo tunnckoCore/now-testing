@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "workspaces": [
+    "@tunnckocore/*"
+  ],
+  "scripts": {
+    "types": "tsc --build",
+    "setup": "yarn && lerna bootstrap",
+    "prebuild": "rm -rf @tunnckocore/*/{dist,pkg}",
+    "build": "bili --format cjs,cjs-min,esm,esm-min -d @tunnckocore",
+    "postbuild": "yarn run types"
+  },
+  "name": "now-testing",
+  "license": "MIT",
+  "devDependencies": {
+    "@tunnckocore/eslint-config": "^5.0.5",
+    "@tunnckocore/prettier-config": "^1.0.4",
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.5",
+    "@types/react": "^16.9.11",
+    "bili": "^4.8.1",
+    "eslint": "^6.6.0",
+    "lerna": "^3.18.3",
+    "prettier": "^1.18.2",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "typescript": "^3.6.4"
+  }
+}
